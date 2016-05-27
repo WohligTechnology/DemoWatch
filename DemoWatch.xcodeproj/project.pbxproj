@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		784317231CF5DFEC0011C3D5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784317221CF5DFEC0011C3D5 /* CoreMotion.framework */; };
+		784317251CF5DFF60011C3D5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784317241CF5DFF60011C3D5 /* HealthKit.framework */; };
+		7843172B1CF5F01E0011C3D5 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7843172A1CF5F01E0011C3D5 /* WatchKit.framework */; };
+		7843172F1CF5F2320011C3D5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AE41ED1CF58BA200875DB8 /* Interface.storyboard */; };
+		784317301CF5F2450011C3D5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AE41ED1CF58BA200875DB8 /* Interface.storyboard */; };
 		78AE41C41CF58BA200875DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE41C31CF58BA200875DB8 /* AppDelegate.swift */; };
 		78AE41C61CF58BA200875DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE41C51CF58BA200875DB8 /* ViewController.swift */; };
 		78AE41C91CF58BA200875DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AE41C71CF58BA200875DB8 /* Main.storyboard */; };
@@ -15,7 +20,6 @@
 		78AE41D91CF58BA200875DB8 /* DemoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE41D81CF58BA200875DB8 /* DemoWatchTests.swift */; };
 		78AE41E41CF58BA200875DB8 /* DemoWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE41E31CF58BA200875DB8 /* DemoWatchUITests.swift */; };
 		78AE41E91CF58BA200875DB8 /* DemoWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 78AE41E81CF58BA200875DB8 /* DemoWatch WatchKit App.app */; };
-		78AE41EF1CF58BA200875DB8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AE41ED1CF58BA200875DB8 /* Interface.storyboard */; };
 		78AE41F11CF58BA200875DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AE41F01CF58BA200875DB8 /* Assets.xcassets */; };
 		78AE41F81CF58BA300875DB8 /* DemoWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 78AE41F71CF58BA300875DB8 /* DemoWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		78AE41FF1CF58BA300875DB8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE41FE1CF58BA300875DB8 /* InterfaceController.swift */; };
@@ -81,6 +85,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		784317221CF5DFEC0011C3D5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		784317241CF5DFF60011C3D5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		784317261CF5E0010011C3D5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		784317281CF5E0080011C3D5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		7843172A1CF5F01E0011C3D5 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		78AE41C01CF58BA200875DB8 /* DemoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AE41C31CF58BA200875DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78AE41C51CF58BA200875DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7843172B1CF5F01E0011C3D5 /* WatchKit.framework in Frameworks */,
+				784317251CF5DFF60011C3D5 /* HealthKit.framework in Frameworks */,
+				784317231CF5DFEC0011C3D5 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +154,11 @@
 		78AE41B71CF58BA200875DB8 = {
 			isa = PBXGroup;
 			children = (
+				7843172A1CF5F01E0011C3D5 /* WatchKit.framework */,
+				784317281CF5E0080011C3D5 /* CoreMotion.framework */,
+				784317261CF5E0010011C3D5 /* HealthKit.framework */,
+				784317241CF5DFF60011C3D5 /* HealthKit.framework */,
+				784317221CF5DFEC0011C3D5 /* CoreMotion.framework */,
 				78AE41C21CF58BA200875DB8 /* DemoWatch */,
 				78AE41D71CF58BA200875DB8 /* DemoWatchTests */,
 				78AE41E21CF58BA200875DB8 /* DemoWatchUITests */,
@@ -343,6 +360,7 @@
 					};
 					78AE41F61CF58BA300875DB8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YVWVDTRG4B;
 					};
 				};
 			};
@@ -397,8 +415,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784317301CF5F2450011C3D5 /* Interface.storyboard in Resources */,
 				78AE41F11CF58BA200875DB8 /* Assets.xcassets in Resources */,
-				78AE41EF1CF58BA200875DB8 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7843172F1CF5F2320011C3D5 /* Interface.storyboard in Resources */,
 				78AE42051CF58BA300875DB8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,10 +608,13 @@
 		78AE420A1CF58BA300875DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DemoWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.DemoWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -603,10 +625,13 @@
 		78AE420B1CF58BA300875DB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DemoWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.DemoWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -733,6 +758,7 @@
 				78AE420B1CF58BA300875DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78AE420D1CF58BA300875DB8 /* Build configuration list for PBXNativeTarget "DemoWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +767,7 @@
 				78AE420F1CF58BA300875DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78AE42111CF58BA300875DB8 /* Build configuration list for PBXNativeTarget "DemoWatch" */ = {
 			isa = XCConfigurationList;
@@ -749,6 +776,7 @@
 				78AE42131CF58BA300875DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78AE42141CF58BA300875DB8 /* Build configuration list for PBXNativeTarget "DemoWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -757,6 +785,7 @@
 				78AE42161CF58BA300875DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78AE42171CF58BA300875DB8 /* Build configuration list for PBXNativeTarget "DemoWatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -765,6 +794,7 @@
 				78AE42191CF58BA300875DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

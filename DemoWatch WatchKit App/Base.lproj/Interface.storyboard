@@ -1,39 +1,113 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Oxystearin-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Oxystearin" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DemoWatch_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Heart Beart" id="nj8-Xh-Iws">
+                            <connections>
+                                <segue destination="kVz-hk-pU8" kind="push" id="GKD-UG-fTq"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Gyroscope" id="xFV-Kb-Nl1">
+                            <connections>
+                                <segue destination="1fl-KZ-4oA" kind="push" id="nCr-TX-XFR"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Accelerometer" id="gKx-MM-paO">
+                            <connections>
+                                <segue destination="uPm-ZM-1et" kind="push" id="P1o-Tb-oTR"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
+        <!--Gyroscope-->
+        <scene sceneID="cPl-dR-cZy">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller title="Gyroscope" id="1fl-KZ-4oA" customClass="InterfaceController" customModule="DemoWatch">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <group width="1" height="19.5" alignment="left" id="I1i-zx-PfU">
+                            <items>
+                                <label width="44" alignment="left" text="X" textAlignment="center" id="MwY-Sv-evr"/>
+                                <label width="44" alignment="left" text="Y" textAlignment="center" id="hv1-iA-Njy"/>
+                                <label width="44" alignment="left" text="Z" textAlignment="center" id="07O-ym-a4P"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start" id="ukc-kx-q55">
+                            <connections>
+                                <action selector="startGyroTap" destination="1fl-KZ-4oA" id="WWH-qL-jMB"/>
+                            </connections>
+                        </button>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <outlet property="rotX" destination="MwY-Sv-evr" id="e7J-ti-bKx"/>
+                        <outlet property="rotY" destination="hv1-iA-Njy" id="cca-2w-hoC"/>
+                        <outlet property="rotZ" destination="07O-ym-a4P" id="k76-dX-YOZ"/>
+                        <outlet property="startGyroBtn" destination="ukc-kx-q55" id="OhX-Ft-Gh2"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="678"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <!--Accelerometer-->
+        <scene sceneID="IMK-Gc-WYF">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller title="Accelerometer" id="uPm-ZM-1et" customClass="InterfaceController" customModule="DemoWatch">
+                    <items>
+                        <group width="1" alignment="left" id="pJm-KA-zHK">
+                            <items>
+                                <label width="44" alignment="left" text="X" textAlignment="center" id="I4W-EB-nSF"/>
+                                <label width="44" alignment="left" text="Y" textAlignment="center" id="hvc-to-syy"/>
+                                <label width="44" alignment="left" text="Z" textAlignment="center" id="rQs-iH-GHG"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start" id="Ymz-9i-fIo">
+                            <connections>
+                                <action selector="startAccTap" destination="uPm-ZM-1et" id="wbj-P0-BIb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="accX" destination="I4W-EB-nSF" id="KCk-Xc-blZ"/>
+                        <outlet property="accY" destination="hvc-to-syy" id="juP-dF-hOg"/>
+                        <outlet property="accZ" destination="rQs-iH-GHG" id="Y78-Eh-SJ5"/>
+                        <outlet property="startAccBtn" destination="Ymz-9i-fIo" id="aEU-Yw-ZN8"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="484" y="678"/>
+        </scene>
+        <!--Heart Beat-->
+        <scene sceneID="bgh-cM-hFP">
+            <objects>
+                <controller title="Heart Beat" id="kVz-hk-pU8" customClass="InterfaceController" customModule="DemoWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="H36-Ox-tDr">
+                            <items>
+                                <label width="56" height="44" alignment="left" text="♥" textAlignment="right" id="yWH-2y-NNd">
+                                    <color key="textColor" red="1" green="0.097480328369999994" blue="0.22820871179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label width="25" height="44" alignment="left" text="--" textAlignment="center" id="eL5-70-Qou"/>
+                                <label height="22.5" alignment="left" text="BPM" id="cKl-46-sFe">
+                                    <color key="textColor" red="1" green="0.1195675168" blue="0.094440027369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start" id="27U-fM-Z1f"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="484" y="345"/>
         </scene>
     </scenes>
 </document>
