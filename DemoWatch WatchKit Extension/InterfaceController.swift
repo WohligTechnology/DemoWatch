@@ -62,6 +62,18 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        print("ALALLA");
+        
+        let motionKit = MotionKit()
+        
+        motionKit.getAccelerometerValues(1.0){
+            (x, y, z) in
+            print(x)
+            print(y)
+            print(z)
+        }
+
+        
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.gyroUpdateInterval = 0.2
         

@@ -13,6 +13,17 @@ class ViewController: UITableViewController {
     @IBOutlet weak var heartLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("ABC");
+        
+           let motionKit = MotionKit()
+        
+        motionKit.getAccelerometerValues(1.0){
+            (x, y, z) in
+            print(x)
+            print(y)
+            print(z)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
